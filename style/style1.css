@@ -1,0 +1,330 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #dbdbdb;
+}
+
+.header {
+    background-color: #ff4500;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+.header .social-icons {
+    margin-top: 10px;
+}
+
+.header .social-icons i {
+    margin: 0 5px;
+    color: #fff;
+}
+
+
+.header.sticky {
+    background-color: #111;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header nav a.active {
+    border-bottom: 2px solid #ff4500;
+    color: #ff4500;
+}
+.about {
+    margin-top: 100px; /* Memberikan ruang antara navbar dan konten About Me */
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+}
+.about h2 {
+    background-color: #ff4500;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.about .content {
+    margin-top: 20px;
+}
+.about .content h3 {
+    font-size: 2em;
+}
+.about .content p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+.about .content .btn {
+    background-color: #ff4500;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.about .content .btn:hover {
+    background-color: #e03e00;
+}
+.about .image {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 5px solid #ff4500;
+    padding: 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.1);
+  }
+  
+  .skills {
+    position: relative; /* Membuat elemen .skills menjadi kontainer untuk background */
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #000; 
+    z-index: 1; /*.skills berada di atas background */
+}
+
+.skills .background-image {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../gambar/gokublack.png') no-repeat center center;
+    background-size: cover; /* Memastikan gambar mengisi seluruh area */
+    background-position: center;
+    z-index: -1; /* Memastikan gambar berada di belakang konten */
+}
+
+.skills .icons {
+    position: relative; /* Memastikan ikon tetap di atas background */
+    z-index: 2; /* Ikon berada di atas gambar latar belakang */
+}
+
+.skills .icons .icon {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.skills .icons .icon i {
+    font-size: 3em;
+    color: #c5359c;
+}
+
+.skills .icons .icon p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+
+
+
+
+/* Efek hover untuk elemen yang dapat diklik */
+a:hover, .btn:hover, .projects .project .image img:hover {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    transform: scale(1.05); /* Membesarkan elemen */
+}
+
+/* Hover pada gambar proyek untuk memberikan efek cahaya */
+.projects .project .image img:hover {
+    transform: scale(1.05); /* Membesarkan gambar */
+    filter: brightness(1.2); /* Mencerahkan gambar */
+    cursor: pointer; /* Mengubah kursor menjadi pointer */
+}
+
+.projects {
+    padding: 50px 20px;
+    text-align: center;
+}
+.projects h2 {
+    font-size: 2.5em;
+    color: #ff4500;
+}
+.projects .project {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #ff4500;
+    padding: 20px;
+    border-radius: 10px;
+}
+.projects .project:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.projects .project .description {
+    width: 50%;
+    text-align: left;
+}
+.projects .project .description h3 {
+    font-size: 1.8em;
+    color: #ff4500;
+}
+.projects .project .description p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+.projects .project .description .btn {
+    background-color: #ff4500;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.projects .project .description .btn:hover {
+    background-color: #e03e00;
+}
+.projects .project .image {
+    width: 45%;
+}
+.projects .project .image img {
+    width: 100%;
+    border-radius: 10px;
+}
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+    border: 2px solid #ff4500;
+    border-radius: 10px;
+    margin: 50px 20px;
+}
+.contact input, .contact textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ff4500;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+}
+.contact .btn {
+    background-color: #ff4500;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.contact .btn:hover {
+    background-color: #e03e00;
+}
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+}
+.footer p {
+    margin: 0;
+}
+.footer .social-icons {
+    margin-top: 10px;
+}
+.footer .social-icons i {
+    margin: 0 5px;
+    color: #fff;
+}
+/* Sticky Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.header.sticky {
+    background-color: #111;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Animasi untuk klik */
+.btn, .header nav a {
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+.btn:active, .header nav a:active {
+    transform: scale(0.95);
+}
+
+/* Navigasi Aktif */
+.header nav a.active {
+    border-bottom: 2px solid #ff4500;
+    color: #ff4500;
+}
+
+/* Animasi pada elemen saat scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about, .skills, .projects, .contact, .footer {
+    animation: fadeInUp 0.5s ease-out;
+}
+/* Styling dasar untuk tombol */
+.btn {
+    background-color: #ff4500; /* Warna latar belakang oranye */
+    color: #fff; /* Warna teks putih */
+    padding: 10px 20px; /* Padding tombol */
+    text-decoration: none; /* Menghapus garis bawah pada link */
+    border-radius: 5px; /* Membuat sudut tombol melengkung */
+    font-size: 1.2em;
+    display: inline-block; /* Membuat tombol menjadi elemen inline-block */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efek hover pada tombol */
+.btn:hover {
+    background-color: #e03e00; /* Ubah warna latar belakang menjadi merah tua */
+    color: #fff; /* Warna teks tetap putih */
+    transform: scale(1.05); /* Membesarkan tombol */
+}
+
+/* Styling untuk tombol Get Started */
+.get-started-btn {
+    background-color: #28a745; /* Warna latar belakang hijau untuk tombol Get Started */
+}
+
+.get-started-btn:hover {
+    background-color: #218838; /* Ubah warna menjadi hijau gelap saat hover */
+    transform: scale(1.1); /* Membesarkan tombol Get Started sedikit lebih besar */
+}
